@@ -1,20 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
-import List from '@/components/List'
+import IndexPage from '@/components/IndexPage'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: Hello
-    },
-    {
-      path: '/list',
-      name: 'Hello',
-      component: List
+      name: 'Index',
+      component: IndexPage
     }
   ]
 })
