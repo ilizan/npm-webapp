@@ -23,6 +23,14 @@
 ###安装ionic2angular依赖
 ###cnpm install --save-dev --save-exact @ionic/cli-plugin-ionic-angular@latest
 
+##安装sass
+win10 用超级管理员权限cmd 窗口运行
+###cnpm uninstall --save node-sass  
+###cnpm install --save node-sass
+cnpm install node-sass -g -d
+
+
+cnpm i node-sass -D --verbose
 npm install
 
 ##运行项目
