@@ -2,7 +2,7 @@
   <div id="app">
     <!-- <div class="top">
       <h2 class="title">
-        敏数信息
+        
       </h2>
       <div class="pageTag">
         <ul>
