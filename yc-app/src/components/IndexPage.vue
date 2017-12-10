@@ -1,14 +1,19 @@
 <template>
   <div class="hello">
     {{msg}}
-    <div>
-    <mt-swipe :auto="4000">
-      <mt-swipe-item>
-        轮播图1
+    <div class="page-swipe">
+    <mt-swipe :auto="40000" :show-indicators="true">
+      <mt-swipe-item v-for="l in list" :key="l.id">
+        {{l.name}}
       </mt-swipe-item>
       <mt-swipe-item>轮播图2</mt-swipe-item>
       <mt-swipe-item>轮播图3</mt-swipe-item>
     </mt-swipe>
+    <ul>
+      <li v-for="l in list">
+        {{l.id}}-----{{l.name}}
+      </li>
+    </ul>
     </div>
   </div>
 </template>
@@ -20,7 +25,11 @@ export default {
   name: 'index',
   data () {
     return {
-      msg: ''
+      msg: '',
+      list: [
+        {id: 1, name: 'a1'},
+        {id: 2, name: 'a2'}
+      ]
     }
   }
 }
@@ -31,13 +40,13 @@ export default {
 body * {
   border: 1px solid red;
 }
-.mint-swipe{
-    min-height: 200px;
+.mint-swipe {
+  height: 200px;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
 }
-.mint-swipe img{
-    width: 100%;
-}
-.mint-swipe-item{
-    /* color:white; */
+.page-swipe .mint-swipe img{
+  width: 100%;
 }
 </style>
