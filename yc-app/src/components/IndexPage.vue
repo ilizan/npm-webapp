@@ -4,18 +4,11 @@
       <swiper-slide v-for="banner in bannerlist" :key="banner.id">
         <img :src="banner.pic_url" @click='bannerClick(banner.id)'>
       </swiper-slide>
-      <swiper-slide>I'm Slide 1</swiper-slide>
-      <swiper-slide>I'm Slide 2</swiper-slide>
-      <swiper-slide>I'm Slide 3</swiper-slide>
-      <swiper-slide>I'm Slide 4</swiper-slide>
-      <swiper-slide>I'm Slide 5</swiper-slide>
-      <swiper-slide>I'm Slide 6</swiper-slide>
-      <swiper-slide>I'm Slide 7</swiper-slide>
         <!-- 如果需要分页器 -->
       <div class="swiper-pagination" slot="pagination"></div>
       
     </swiper>
-    <ul v-show="false">
+    <ul v-show="true">
       <li v-for="l in bannerlist" :key="l.id">
         {{l.id}}-----{{l.name}}
       </li>
@@ -90,13 +83,13 @@ export default {
           id: 1,
           name: "name1",
           pic_url:
-            "http://ww1.sinaimg.cn/large/9b9ae07fjw1f9dx62knn6j21hc0m8qcs.jpg"
+            "https://img.qlchat.com/qlLive/slideImg/81NWKTTY-U5X2-PVXE-1513082959865-IYRV3UDZ1VB4.jpg"
         },
         {
           id: 2,
           name: "name2",
           pic_url:
-            "http://ww3.sinaimg.cn/large/9b9ae07fjw1f9ey0wx4qwj21hc0m8n1c.jpg"
+            "https://img.qlchat.com/qlLive/slideImg/6OPKPMYK-TZDH-DF5H-1513082975746-73SXI9T6T1GU.jpg"
         }
       ];
     },
@@ -110,7 +103,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 body * {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .swiper-slide img {
   width: 100%;
