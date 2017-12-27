@@ -35,3 +35,4 @@ npm install
 
 ##运行项目
 ###ionic start
+ionic serve
