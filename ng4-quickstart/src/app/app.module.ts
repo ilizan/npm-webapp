@@ -1,16 +1,16 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
-import { Routes,RouterModule } from '@angular/router';
+import { Routes,RouterModule } from '@angular/router';//不添加路由则注释该行
 import { AppComponent }  from './app.component';
 import { IndexComponent }  from './app.indexcomponent';
 import { UserComponent }  from './app.usercomponent';
 
 
 
-// @NgModule({
-//   imports:      [ BrowserModule,RouterModule ],
-//   declarations: [ AppComponent,UserComponent ],
+// @NgModule({//不添加路由写法
+//   imports:      [ BrowserModule],
+//   declarations: [ AppComponent ],
 //   bootstrap:    [ AppComponent ]
 // })
 
