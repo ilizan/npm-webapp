@@ -4,15 +4,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 // import { TabsPage } from '../pages/tabs/tabs';
-// import {WelcomePage} from "../pages/welcome/welcome";
-import {HomePage} from "../pages/home/home";
+import {WelcomePage} from "../pages/welcome/welcome";
+// import {HomePage} from "../pages/home/home";
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   // rootPage: any = TabsPage;
-  // rootPage:any = WelcomePage;
-  rootPage:any = HomePage;
+  rootPage = WelcomePage;
+  // rootPage:any = HomePage;
 
   // constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
   constructor(platform: Platform) {
