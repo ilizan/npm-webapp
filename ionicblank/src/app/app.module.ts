@@ -5,34 +5,35 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { LoginPage } from '../pages/login/login';
-
+// import { HomePage } from '../pages/home/home';
+// import { LoginPage } from '../pages/login/login';
+import { HomePageModule } from '../pages/home/home.module';
+import { LoginPageModule } from '../pages/login/login.module'
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    LoginPage
+    // HomePage,
+    // LoginPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp,{},{
-      links: [
-        {component: HomePage, name: 'index', segment: 'index'},
-        {component: LoginPage, name: 'index2', segment: 'login'}
-      ]
-    })
+    IonicModule.forRoot(MyApp,{
+      mode:'ios',
+      backButtonText: "返回"
+    }),
+    LoginPageModule,
+    HomePageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    LoginPage
+    // HomePage,
+    // LoginPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }

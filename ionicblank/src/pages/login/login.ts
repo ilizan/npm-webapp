@@ -14,13 +14,23 @@ import { HomePage } from '../home/home';
   templateUrl: 'login.html',
 })
 export class LoginPage {
-
+  data:any;
+  username:"";
+  password:"";
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    
+    this.data = navParams.get('id');
+    console.log(this.data)
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
-
+  // ToUrlHome = function(){
+  //   console.log("url");
+  //   this.navCtrl.push(HomePage);
+  // }
+  login = function(){
+    console.log(this.username);
+    console.log(this.password);
+  }
 }
