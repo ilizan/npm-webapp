@@ -23,7 +23,10 @@ export class LoginPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+    console.log('页面加载完 LoginPage');
+  }
+  ionViewWillEnter(){//我要进来了
+    console.log('我要进来了 LoginPage');
   }
   // ToUrlHome = function(){
   //   console.log("url");
@@ -32,5 +35,8 @@ export class LoginPage {
   login = function(){
     console.log(this.username);
     console.log(this.password);
+  }
+  goback = function(){//返回
+    this.navCtrl.pop();
   }
 }
