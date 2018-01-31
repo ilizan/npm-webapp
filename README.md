@@ -24,7 +24,12 @@ $ git push -u origin [name]
 
 #方法二
 新建的项目 需要清空
-然后 添加远程仓库 git remote add neworigin http://xxx.git
+
+然后 
+
+添加远程仓库 
+git remote add neworigin http://xxx.git
+
 然后直接push
 //推送到服务器代码
 git push neworigin master
