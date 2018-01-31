@@ -1,0 +1,26 @@
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-title>
+     111
+    </ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content padding>
+  The world is your oyster.
+  <p>
+    123
+  </p>
+  <!-- <a href="javascript:;" [navPush]="pushPage" [navParams]="params">登录</a> -->
+  <!-- <a href="javascript:;" (click)="ToUrl()">登录</a> -->
+  <a href="javascript:;" (click)="ToUrlC()">传参跳转</a>
+  <div *ngFor="let item of data">{{item}}</div>
+  <div *ngFor="let item of data2">{{item.name}}</div>
+  <ion-list>
+    <ion-item *ngFor="let item of data2">
+      <h2>{{item.name}}</h2>
+      <p>{{item.description}}</p>
+      <p item-end>{{item.gender?'男':'女'}}, {{2017 - item.birthYear}} 岁</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
