@@ -4,8 +4,8 @@
 cnpm install vue-awesome-swiper@2.5.4 --save
 
 180131test
-#方法一
-##第一次操作命令
+# 方法一
+## 第一次操作命令
 同一个本地仓库推送到两个不同远程仓库：
 查看本地仓库 git remote -v
 此处显示1个远程仓库
@@ -22,9 +22,9 @@ $ git branch [name]
 $ git push -u origin [name]
 
 
-#方法二
+# 方法二
 新建的项目 
-##注意需要
+## 注意需要
 需要清空
 
 然后 
