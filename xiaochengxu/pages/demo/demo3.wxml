@@ -1,0 +1,2 @@
+<view>demo3</view>
+<wxs src="demo.wxs" module="demo" /> 

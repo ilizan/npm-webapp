@@ -1,0 +1,9 @@
+var tools = require("./tools.wxs");
+module.exports = {
+  FOO1 : '12111'
+}
+console.log(tools.FOO);
+console.log(tools.bar("logic.wxs"));
+console.log(tools.msg);
+
+

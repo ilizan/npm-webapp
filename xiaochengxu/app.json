@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/zujian/zujian",
+    "pages/demo/demo3",
+    "pages/demo/demo2",
+    "pages/demo/demo",
+    "pages/logs/logs",
+    "pages/demo/header",
+    "pages/zujian/picker",
+    "pages/zujian/pickerview",
+    "pages/index/navigator",
+    "pages/index/redirect",
+    "pages/zujian/audio",
+    "pages/zujian/image",
+    "pages/zujian/video",
+    "pages/zujian/camera",
+    "pages/zujian/live-player",
+    "pages/zujian/live-pusher",
+    "pages/zujian/map",
+    "pages/zujian/canvas",
+    "pages/zujian/open-data",
+    "pages/api/request"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#ccc",
+    "navigationBarBackgroundColor": "#ccc",
+    "navigationBarTitleText": "ilizan官方",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#ccc",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/demo/demo",
+        "text": "demo"
+      },
+      {
+        "pagePath": "pages/zujian/zujian",
+        "text": "组件"
+      },
+      {
+        "pagePath": "pages/zujian/pickerview",
+        "text": "组件2"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

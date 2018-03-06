@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view class="btn-area">
+  <navigator url="../index/navigator?title=navigate" hover-class="navigator-hover">跳转到新页面</navigator>
+  <navigator url="../zujian/audio" hover-class="navigator-hover">audio</navigator>
+  <navigator url="../zujian/image" hover-class="navigator-hover">image</navigator>
+  <navigator url="../zujian/video" hover-class="navigator-hover">video</navigator>
+  <navigator url="../zujian/camera" hover-class="navigator-hover">摄像头</navigator>
+  <navigator url="../zujian/live-player" hover-class="navigator-hover">live-player</navigator>
+  <navigator url="../zujian/live-pusher" hover-class="navigator-hover">live-pusher</navigator>
+  <navigator url="../zujian/map" hover-class="navigator-hover">map</navigator>
+  <navigator url="../zujian/canvas" hover-class="navigator-hover">canvas</navigator>
+  <navigator url="../api/request" hover-class="navigator-hover">request</navigator>
+  
+  <navigator url="../zujian/picker?title=redirect" open-type="redirect" hover-class="other-navigator-hover">在当前页打开</navigator>
+  <navigator url="../zujian/zujian" open-type="switchTab" hover-class="other-navigator-hover">切换 Tab</navigator>
+</view>
+
+
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  {{latitude}}
+  <map class='map1' latitude="{{latitude}}" longitude="{{longitude}}">
+  </map>
+  <div bindtap="getSys">扫一扫</div>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
