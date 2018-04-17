@@ -1,0 +1,12 @@
+<h5>{{name}}
+</h5>
+
+
+<div *ngIf="showSkills">
+    <h3>我的技能</h3>
+    <ul>
+        <li *ngFor="let skill of skills">
+            {{skill}}
+        </li>
+    </ul>
+</div>

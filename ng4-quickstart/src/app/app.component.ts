@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
 @Component({//路由写法
   selector: 'my-app',
   // template: ``,
-  templateUrl: 'app/1.html',
+  templateUrl: 'app/main.html',
 })
-export class AppComponent  { name = 'jquery'; }
+export class AppComponent  { name = '云起云'; }
 

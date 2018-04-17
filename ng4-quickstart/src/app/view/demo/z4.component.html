@@ -1,0 +1,8 @@
+<h5>{{name}}</h5>
+<div (click)="click1()">点我试试</div>
+<button (click)="toggles()">
+    {{ flag ? "隐藏" : "显示" }}
+</button>
+<div *ngIf="flag">
+    显示
+</div>

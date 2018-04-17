@@ -1,0 +1,64 @@
+<h5>{{name}}</h5>
+<video #player style="border:1px solid red;"></video>
+<button (click)="player.pause()">Pause</button>
+<br/>
+<h3>我的技能</h3>
+<h3>我的技能</h3>
+<ul>
+    <li *ngFor="let skill of skills">
+        {{skill}}
+    </li>
+</ul>
+<form (submit)="addSkill(skill.value)">
+    <label>添加技能</label>
+    <input type="text" #skill placeholder="回车也可以添加">
+    <button type="submit">提交</button>
+</form>
+<h4>表单</h4>
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)">
+    <fieldset ngModelGroup="user">
+        <input type="text" [(ngModel)]="username" name="username" required minlength="3" #userName="ngModel">
+        <p>Name控件的valid状态：{{userName.valid}} - 表示控件有效</p>
+        <p>Name控件的invalid状态：{{userName.invalid}} - 表示控件无效</p>
+        <p>Name控件的pristine状态：{{userName.pristine}} - 表示控件值未改变</p>
+        <p>Name控件的dirty状态：{{userName.dirty}} - 表示控件值已改变</p>
+        <p>Name控件的touched状态：{{userName.touched}} - 表示控件已被访问过</p>
+        <p>Name控件的untouched状态：{{userName.untouched}} - 表示控件未被访问过</p>
+        <div *ngIf="userName.errors?.required">请输入</div>
+        <div *ngIf="userName.errors?.minlength">
+            用户名的长度必须大于 {{userName.errors?.minlength.requiredLength}}，当前的长度为 {{userName.errors?.minlength.actualLength}}
+        </div>
+        <input type="password" ngModel name="password">
+    </fieldset>
+    <button type="submit">提交</button>
+    {{loginForm.value | json}}
+</form>
+<form #loginForm1="ngForm">
+    Angular版本：
+    <div *ngFor="let version of versions;">
+        <input [attr.id]="version" name="version" ngModel required [value]="version" type="radio">
+        <label [attr.for]="version">{{version}}</label>
+    </div>
+    <hr> {{loginForm1.value | json}}
+</form>
+<form #loginForm2="ngForm">
+    Angular版本：
+    <select name="version" [ngModel]="versions[0]">
+        <option *ngFor="let version of versions;" [value]="version">
+            {{version}}
+        </option>
+    </select>
+    <hr> {{loginForm2.value | json}}
+</form>
+<form #loginForm3="ngForm">
+    Angular版本：
+    <div>
+        <select name="version" [ngModel]="version" required>
+            <option *ngFor="let version of versions1;" [value]="version">
+                {{version}}
+            </option>
+        </select>
+        <label></label>
+    </div>
+    <hr> {{loginForm3.value | json}}
+</form>

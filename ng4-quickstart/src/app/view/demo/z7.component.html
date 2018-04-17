@@ -1,0 +1,11 @@
+<h5>{{name}}</h5>
+<ul *ngIf="members">
+    <li *ngFor="let member of members;">
+        <p>
+            <img [src]="member.avatar_url" width="48" height="48" /> ID：
+            <span>{{member.id}}</span>
+            Name:
+            <span>{{member.login}}</span>
+        </p>
+    </li>
+</ul>
