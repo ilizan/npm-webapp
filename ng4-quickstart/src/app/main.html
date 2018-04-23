@@ -1,16 +1,30 @@
-<a routerLink="/">首页</a>
-<a routerLink="/z1">插值表达式</a><br/>
-<a routerLink="/z2">自定义组件</a>
-<a routerLink="/z3">常用指令简介</a>
-<a routerLink="/z4">事件绑定</a>
-<a routerLink="/z5">表单模块/video</a>
-<a routerLink="/z6">http模块</a>
-<a routerLink="/z7">注入服务</a>
-<a routerLink="/z81">input装饰器</a>
-<a routerLink="/z91">Output 装饰器</a>
+<div style="width: 200px;float: left;">
+<h2 style="display: none">基础</h2>
+<ul style="display: ">
+    <li><a routerLink="/">首页</a></li>
+    <li><a routerLink="/z1">插值表达式</a></li>
+    <li><a routerLink="/z2">自定义组件</a></li>
+    <li><a routerLink="/z3">常用指令简介</a></li>
+    <li><a routerLink="/z4">事件绑定</a></li>
+    <li><a routerLink="/z5">表单模块/video</a></li>
+    <li><a routerLink="/z6">http模块</a></li>
+    <li><a routerLink="/z7">注入服务</a></li>
+    <li><a routerLink="/z81">input装饰器</a></li>
+    <li><a routerLink="/z91">Output 装饰器</a></li>
 
+</ul>
+<h2></h2>
+<ul>
+    <li><a routerLink="/z10">指令</a></li>
+    <li><a routerLink="/z11/1">路由</a></li>
+    <ul>
+        <li><a routerLink="/z11r/user">子路由</a></li>
+    </ul>
+    <li><a routerLink="/z12">管道</a></li>
+</ul>
 
-<div style="border: 1px solid red;">
-    <!-- <h2 [zd]="'Hello, Semlinker!'">Hello, Angular</h2> -->
+</div>
+<div style="border: 1px solid #ccc; float: left;">
+    
     <router-outlet></router-outlet>
 </div>
