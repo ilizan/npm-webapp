@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>angular</title>
+    <style>
+        .content {
+            width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ececec
+        }
+
+        html,
+        body,
+        h1,
+        h2 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, STHeiti, "WenQuanYi Micro Hei", SimSun, sans-serif;
+            font-weight: 300;
+        }
+
+        .h1Title {
+            text-align: center;
+        }
+
+        h2 {
+            font-weight: inherit
+        }
+
+        blockquote {
+            background-color: #ececec;
+            padding: 10px;
+            line-height: 25px;
+        }
+
+        strong {
+            border: 1px solid red;
+            font-weight: inherit
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1 class="h1Title">Angular</h1>
+        <p>参照
+            <br>https://www.angular.cn
+            <br>https://github.com/angular/angular-cli
+        </p>
+        <hr>
+        <h2>一、设置开发环境</h2>
+        <p>1、node官网下载安装node,安装后查看node版本命令：
+            <strong>node -v</strong>
+        </p>
+        <p>2、然后全局安装Angular CLI,命令
+            <strong>npm install -g @angular/cli</strong>,安装后查看CLI版本命令:
+            <strong>ng -v</strong>
+        </p>
+        <p>
+            <blockquote>
+                若已经安装过Angular CLI,可自行选择更新Angular CLI,
+                <br> 更新方法:卸载Angular CLI命令:
+                <strong>npm uninstall -g angular-cli</strong>
+                <br> 清除缓存:
+                <strong>npm cache verify</strong>
+                <br> 安装新版本(全局):
+                <strong>npm install -g @angular/cli</strong>
+            </blockquote>
+        </p>
+        <h2>二、创建新项目</h2>
+        <p>项目目录下命令:
+            <strong>ng new my-app</strong>
+        </p>
+    </div>
+</body>
+
+</html>
