@@ -3,18 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: ilizan
+title: Hexo
 subtitle:
-description: 
-author: 礼赞
-language: zh-Hans
+description:
+keywords:
+author: John Doe
+language:
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-## url: http://ilizan.gitee.io/blog/
 url: http://yoursite.com
-root: /blog
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -78,13 +78,6 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-- type: git
-  repo: https://gitee.com/ilizan/blog.git
+  type: git
+  repo: https://github.com/ilizan/netshenjingbing.git
   branch: master
-- type: git
-  repo: https://git.coding.net/ilizan/blog.git
-  branch: master
-- type: git
-  repo: https://github.com/ilizan/blog.git
-  branch: master
-
