@@ -1,0 +1,6 @@
+ul,li{
+    display: block;
+}
+.selected{
+    border:1px solid #ccc;
+}
