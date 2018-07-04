@@ -29,6 +29,8 @@ import { Z12Component }  from './view/gd/z12.component';
 // import { WelcomePipe }  from './view/gd/welcomePipe';
 import { AllPipes }  from './view/gd/all-pipes';
 
+import {Zsq1Component} from './view/zsq/zsq1'
+import {Zsq1DeteilComponent} from './view/zsq/zsq1-deteil/zsq1-deteil'
 
 // @NgModule({//不添加路由写法
 //   imports:      [ BrowserModule],
@@ -57,6 +59,7 @@ export const ROUTES: Routes = [
     ]
   },
   {path:'z12',component:Z12Component},//管道/自定义管道
+  {path:'zsq1',component:Zsq1Component},//装饰器input
   
   
 ];
@@ -87,6 +90,8 @@ export const ROUTES: Routes = [
     Z11UserComponent,
     Z12Component,
     // WelcomePipe,//管道
+    Zsq1Component,
+    Zsq1DeteilComponent
     
   ],
   providers: [ZService],
