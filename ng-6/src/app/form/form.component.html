@@ -1,0 +1,25 @@
+<div>  
+  <form action="">
+    <span class="t1">输入框</span>
+    <input style="width:100px;" nz-input [(ngModel)]="userInfo.username" name="username">
+    <!-- 下拉： -->
+    <!-- <select name="item" [(ngModel)]="userInfo.sex">
+      <option *ngFor="let item of sexList;" [value]="item">
+        {{item}}
+      </option>
+    </select> -->
+    <span class="t1">单选</span>
+    <div *ngFor="let item of sexList;">
+      <input [attr.id]="item" name="item" [(ngModel)]="userInfo.sex" required [value]="item" type="radio">
+      <label [attr.for]="item">{{item}}</label>
+    </div>
+  </form>
+  <button type="button" (click)="addBtn()">添加</button>
+
+  <div *ngFor="let user of userList">
+    <ul>
+      <app-user [user]="user"></app-user>
+    </ul>
+  </div>
+  
+</div>

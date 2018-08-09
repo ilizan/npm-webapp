@@ -1,0 +1,18 @@
+<h2>表单</h2>
+<!-- {{userInfo | json}}
+<hr> {{userList | json}} -->
+<hr>
+<input nz-input style="width: 200px" placeholder="name" [(ngModel)]="userInfo.name">
+
+<nz-radio-group [(ngModel)]="userInfo.sex">
+  <label nz-radio nzValue="男">男</label>
+  <label nz-radio nzValue="女">女</label>
+</nz-radio-group>
+
+<button (click)="add()" nz-button nzType="primary">添加</button>
+
+<ul>
+  <li *ngFor="let user of userList">
+    <app-user [user]="user"></app-user>
+  </li>
+</ul>

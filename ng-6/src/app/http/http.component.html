@@ -1,0 +1,44 @@
+<p>
+  http works!
+  <button nz-button nzType="primary" (click)="goUrl()">跳转</button>
+</p>
+<nz-table #basicTable [nzData]="list" [nzShowPagination]="false" [nzLoading]="load">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>login</th>
+      <th>icon</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of basicTable.data">
+      <td>{{data.id}}</td>
+      <td>{{data.login}}</td>
+      <td>
+        <img [src]="data.avatar_url" width="48" height="48" />
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
+
+<h4>内建管道</h4>
+<div>
+  <p ngNonBindable>{{ 'Angular' | uppercase }}转大写</p>
+  <p>{{ 'Angular' | uppercase }}</p>
+</div>
+<div>
+  <p ngNonBindable>{{ 'Angular' | lowercase }}转小写</p>
+  <p>{{ 'Angular' | lowercase }}</p>
+</div>
+<div>
+  <p ngNonBindable>{{ today | date: 'yyyy-MM-dd HH:mm:ss' }}日期时间转换</p>
+  <p>{{ today | date: 'yyyy-MM-dd HH:mm:ss' }}</p>
+</div>
+<div>
+  <p ngNonBindable>{{ { name: 'semlinker' } | json }}json</p>
+  <p>{{ { name: 'semlinker' } | json }}</p>
+</div>
+<div>
+  <p ngNonBindable>{{ 'semlinker' | slice:0:3 }}截取</p>
+  <p>{{ 'semlinker' | slice:0:3 }}</p>
+</div>
