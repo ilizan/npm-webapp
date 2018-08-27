@@ -1,4 +1,4 @@
-# ilizan-dev
+# vue3-demo2
 
 ## Project setup
 ```
