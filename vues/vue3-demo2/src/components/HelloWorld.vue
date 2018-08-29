@@ -1,5 +1,21 @@
 <template>
   <div class="hello">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+      </div>
+      <!-- 如果需要分页器 -->
+      <div class="swiper-pagination"></div>
+      
+      <!-- 如果需要导航按钮 -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      
+      <!-- 如果需要滚动条 -->
+      <div class="swiper-scrollbar"></div>
+  </div>
     <h1>{{ msg }}</h1>
     <p>
       For guide and recipes on how to configure / customize this project,<br>
@@ -30,12 +46,39 @@
 </template>
 
 <script>
+import Swiper from "swiper";
+import { getFn,postFn } from "../api/api";
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
     msg: String
+  },
+  methods: {
+    getdemo() {
+      //获取当前登录教师直播信息
+      let para = {
+        userid: 1111
+      };
+      getFn(para).then(res => {
+        this.tvInfo = res.data;
+      });
+    },
+    postdemo() {
+      var loginParams = {
+        username: "name",
+        password: "123456"
+      };
+      postFn(loginParams).then(data => {});
+    }
+  },
+  mounted() {
+    new Swiper(".swiper-container", {
+      autoplay: true //可选选项，自动滑动
+    });
+    // this.getdemo();
+    // this.postdemo();
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -53,5 +96,11 @@ li {
 }
 a {
   color: #42b983;
+}
+.swiper-container {
+  width: 500px;
+  height: 300px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
 }
 </style>
