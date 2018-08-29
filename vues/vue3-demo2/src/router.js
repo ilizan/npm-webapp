@@ -1,9 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Login from './view/Login.vue'
-import Home from './view/Home.vue'
-import Index from './view/index/index.vue'
-import List from './view/menu1/list.vue'
+import Login from './view/Login.vue'//登录页
+import Home from './view/Home.vue'//登陆后主页
+import Index from './view/index/Index.vue'//登陆后默认显示页
+import Fcomponents from './view/index/Fcomponents.vue'//组件demo
+import Ajax from './view/index/Ajax.vue'//ajax请求demo
+import SwiperPage from './view/index/SwiperPage.vue'//SwiperDemo
+import Editor from './view/index/Editor.vue'//SwiperDemo
+
+import List from './view/menu1/List.vue'//列表页
 
 Vue.use(Router)
 
@@ -17,11 +22,15 @@ export default new Router({
     },
     {
       path: '/',
-      name: '介绍',
+      name: '目录一',
       component: Home,
       class: 'el-icon-message',
       children:[
-        { path: '/',component:Index,name:'介绍'}
+        { path: '/',component:Index,name:'介绍'},
+        { path: '/components',component:Fcomponents,name:'父子组件'},
+        { path: '/ajax',component:Ajax,name:'ajax请求'},
+        { path: '/swiper',component:SwiperPage,name:'swiper轮播图'},
+        { path: '/editor',component:Editor,name:'在线编辑器'}
         
       ]
     },

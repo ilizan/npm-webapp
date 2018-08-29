@@ -7,7 +7,7 @@
                 基于vue cli 3.0搭建，集成router element axios。
                 </p>
                 <p class="tag_all">
-                    <el-tag v-for="item in tagList">{{item}}{{父子组件}}</el-tag>
+                    <el-tag v-for="item in tagList">{{item}}</el-tag>
                 </p>
             </el-col>
         </el-row>
@@ -24,7 +24,13 @@ export default {
   },
   methods: {
     getListFn() {
-      this.tagList = ["父子组件", "ajax请求", "表单", "在线编辑器"];
+      this.tagList = [
+          "父子组件", 
+          "ajax请求", 
+          "表单", 
+          "swiper",
+          "在线编辑器"
+          ];
     }
   },
   mounted() {
