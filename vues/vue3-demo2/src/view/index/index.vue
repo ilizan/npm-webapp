@@ -29,7 +29,8 @@ export default {
           "ajax请求", 
           "表单", 
           "swiper",
-          "在线编辑器"
+          "在线编辑器",
+          "scrollbar"
           ];
     }
   },

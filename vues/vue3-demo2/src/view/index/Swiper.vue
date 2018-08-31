@@ -38,7 +38,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .swiper-container {
-  width: 500px;
+  // width: 500px;
   height: 300px;
   margin: 20px auto;
   border: 1px solid #ccc;

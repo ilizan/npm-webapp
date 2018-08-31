@@ -1,17 +1,16 @@
 <template>
   <div id="home">
-    
-    <Header v-on:isCollapse = "isCollapseFn"></Header>
-    <el-container>
-      
+    <el-scrollbar style="height:700px;overflow:hidden;" class="page__scroll">
+      <Header v-on:isCollapse = "isCollapseFn"></Header>
       <el-container>
-        <Sidebar :isCollapse = "isCollapse"></Sidebar>
-        <el-main class="el-main">
-          <router-view/>
-        </el-main>
+        <el-container>
+          <Sidebar :isCollapse = "isCollapse"></Sidebar>
+          <el-main class="el-main">
+            <router-view/>
+          </el-main>
+        </el-container>
       </el-container>
-    </el-container>
-    
+    </el-scrollbar>
   </div>
 </template>
 
