@@ -4,7 +4,7 @@
             <el-col :span="24">
                 <h1>介绍</h1>
                 <p>
-                基于vue cli 3.0搭建，集成router element axios。
+                基于vue cli 3.0搭建，集成router element axios 
                 </p>
                 <p class="tag_all">
                     <el-tag v-for="item in tagList">{{item}}</el-tag>
