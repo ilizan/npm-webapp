@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../angular/angular.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="pCtrl">
+        <h2>ng-disabled 指令</h2>
+        <p><button ng-disabled="mySwitch">点我!</button></p>
+        <input type="checkbox" ng-model="mySwitch">按钮
+        {{mySwitch}}
+        <h2>ng-show 指令</h2>
+        <p ng-show="true">我是可见的。</p>
+
+        <p ng-show="false">我是不可见的。</p>
+        <div ng-init="str =12">
+            <p ng-show="str>11">>11</p>
+        </div>
+        <h2>ng-hide 指令</h2>
+        <p ng-hide="true">我是不可见的。</p>
+
+        <p ng-hide="false">我是可见的。</p>
+    </div>
+</body>
+
+</html>
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("pCtrl", function ($scope, $http) {
+
+    });
+</script>

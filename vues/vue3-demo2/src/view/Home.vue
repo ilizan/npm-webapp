@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <el-scrollbar style="height:700px;overflow:hidden;" class="page__scroll">
+    <el-scrollbar style="height:800px;overflow:hidden;" class="page__scroll">
       <Header v-on:isCollapse = "isCollapseFn"></Header>
       <el-container>
         <el-container>

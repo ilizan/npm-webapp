@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../angular/angular.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="pCtrl">
+        <h2>angular事件</h2>
+        <button ng-click="count = count + 1">点我！</button>
+
+        <p>{{ count }}</p>
+        <h2>隐藏/显示</h2>
+        <button ng-click="toggle()">隐藏/显示</button>
+
+        <p ng-hide="myVar">
+            名: <input type="text" ng-model="firstName"><br>
+            姓名: <input type="text" ng-model="lastName"><br>
+            <br>
+            Full Name: {{firstName + " " + lastName}}
+        </p>
+    </div>
+</body>
+
+</html>
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("pCtrl", function ($scope, $http) {
+        $scope.firstName = "John",
+            $scope.lastName = "Doe"
+        $scope.myVar = false;
+        $scope.toggle = function () {
+            $scope.myVar = !$scope.myVar;
+        };
+    });
+</script>

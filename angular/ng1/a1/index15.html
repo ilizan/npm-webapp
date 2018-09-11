@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../angular/angular.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="pCtrl">
+        <h2>表单</h2>
+        <p>
+            input:
+            <input type="text" ng-model="firstname">
+            {{firstname}}
+        </p>
+        <p>
+            Checkbox:
+            <input type="checkbox" ng-model="myVar">
+            <span ng-show="myVar">My Header</span>
+        </p>
+        <p>
+            单选框:
+            <input type="radio" ng-model="myVars" value="dogs">Dogs
+            <input type="radio" ng-model="myVars" value="tuts">Tutorials
+            <input type="radio" ng-model="myVars" value="cars">Car
+            <hr>
+            {{myVars}}
+        </p>
+        <p>
+            下拉菜单:
+            <select ng-model="myVari">
+                <option value="">
+                <option value="dogs">Dogs
+                <option value="tuts">Tutorials
+                <option value="cars">Cars
+            </select>
+            {{myVari}}
+        </p>
+        <h2>
+            表单实例
+        </h2>
+        <form novalidate>
+            First Name:<br>
+            <input type="text" ng-model="user.firstName"><br>
+            Last Name:<br>
+            <input type="text" ng-model="user.lastName">
+            <br><br>
+            <button ng-click="reset()">RESET</button>
+        </form>
+        <p>form = {{user}}</p>
+        <p>master = {{master}}</p>
+    </div>
+</body>
+
+</html>
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("pCtrl", function ($scope, $http) {
+        $scope.firstname = "John";
+
+        $scope.master = { firstName: "John", lastName: "Doe" };
+        $scope.reset = function () {
+            $scope.user = angular.copy($scope.master);
+        };
+        $scope.reset();
+    });
+</script>

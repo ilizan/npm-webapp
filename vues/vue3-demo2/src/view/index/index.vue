@@ -32,6 +32,10 @@ export default {
           "在线编辑器",
           "scrollbar"
           ];
+      this.getA();
+    },
+    getA(){
+      console.log(11111)
     }
   },
   mounted() {

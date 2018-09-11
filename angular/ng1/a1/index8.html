@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../angular/angular.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <h2>过滤器</h2>
+    <div ng-controller="personCtrl">
+
+        <p>姓名为 {{ lastName | uppercase }}</p>
+        <p>姓名为 {{ lastName | lowercase }}</p>
+    </div>
+    <div ng-controller="pCtrl2">
+        <input type="number" ng-model="quantity">
+        <input type="number" ng-model="price">
+
+        <p>总价 = {{ (quantity * price) | currency }}</p>
+    </div>
+    <h2>向指令添加过滤器</h2>
+    <div ng-controller="pCtrl3">
+        <ul>
+            <li ng-repeat="x in names | orderBy:'name'">
+                {{ x.name + ', ' + x.country }}
+            </li>
+        </ul>
+    </div>
+    <h2>过滤输入</h2>
+    <div ng-controller="pCtrl4">
+
+        <p><input type="text" ng-model="test"></p>
+
+        <ul>
+            <li ng-repeat="x in names | filter:test | orderBy:'country'">
+                {{ (x.name | uppercase) + ', ' + x.country }}
+            </li>
+        </ul>
+
+    </div>
+    <h2>自定义过滤器</h2>
+    <div ng-controller="pCtrl5">
+        {{text| reverse}}
+    </div>
+    <script>
+        angular.module('myApp', [])
+            .controller('personCtrl', function ($scope) {
+                $scope.firstName = "John",
+                    $scope.lastName = "Doe",
+                    $scope.fullName = function () {
+                        return $scope.firstName + " " + $scope.lastName;
+                    }
+            })
+            .controller('pCtrl2', function ($scope) {
+                $scope.quantity = 1;
+                $scope.price = 9.99;
+            })
+            .controller('pCtrl3', function ($scope) {
+                $scope.names = [{
+                    name: "a1",
+                    country: "jflka"
+                }, {
+                    name: "b1",
+                    country: "fjsl"
+                }, {
+                    name: "c1",
+                    country: "fsdl"
+                }]
+            })
+            .controller('pCtrl4', function ($scope) {
+                $scope.names = [{
+                    name: "a1",
+                    country: "jflka"
+                }, {
+                    name: "b1",
+                    country: "fjsl"
+                }, {
+                    name: "c1",
+                    country: "fsdl"
+                }]
+            })
+            .controller('pCtrl5', function ($scope) {
+                $scope.text = "123";
+            })
+            .filter('reverse', function () { //可以注入依赖
+                return function (text) {
+                    return text.split("").reverse().join("");
+                }
+            });
+        ;
+    </script>
+</body>
+
+</html>

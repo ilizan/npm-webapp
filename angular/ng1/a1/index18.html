@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../angular/angular.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="pCtrl">
+        <h2>AngularJS 包含</h2>
+        <div ng-include="'index18-include.html'"></div>
+        <h2>包含angular代码</h2>
+        <div ng-include="'index18-include2.html'"></div>
+    </div>
+</body>
+
+</html>
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("pCtrl", function ($scope, $http) {
+        $http.get("sites.json").then(function (response) {
+            $scope.names = response.data.sites;
+        });
+    });
+</script>

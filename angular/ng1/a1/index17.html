@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../angular/angular.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="pCtrl">
+        <h2>angular api</h2>
+        <h3>angular.lowercase()</h3>
+        <div>
+            <p>{{ x1 }}</p>
+            <p>{{ x2 }}</p>
+
+        </div>
+        <h3>angular.uppercase()</h3>
+        <div>
+            <p>{{ x3 }}</p>
+            <p>{{ x4 }}</p>
+
+        </div>
+        <h3>angular.isString()</h3>
+        <div>
+            <p>{{ x5 }}</p>
+            <p>{{ x6 }}</p>
+
+        </div>
+        <h3>angular.isNumber()</h3>
+        <div>
+            <p>{{ x7 }}</p>
+            <p>{{ x8 }}</p>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("pCtrl", function ($scope, $http) {
+        $scope.x1 = "RUNOOB";
+        $scope.x2 = angular.$$lowercase($scope.x1);
+
+        $scope.x3 = "runoob";
+        $scope.x4 = angular.$$uppercase($scope.x3);
+
+        $scope.x5 = "RUNOOB";
+        $scope.x6 = angular.isString($scope.x5);
+
+        $scope.x7 = "RUNOOB";
+        $scope.x8 = angular.isNumber($scope.x7);
+    });
+</script>

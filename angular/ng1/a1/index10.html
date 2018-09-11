@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../angular/angular.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <h2>$http服务</h2>
+    <div ng-controller="pCtrl">
+        <!-- {{name}} -->
+        <pre>
+                $http({
+                    method: 'GET',
+                    url: '/someUrl'
+                }).then(function successCallback(response) {
+                        // 请求成功执行代码
+                    }, function errorCallback(response) {
+                        // 请求失败执行代码
+                });
+        </pre>
+        <pre>
+                $http.get
+                $http.head
+                $http.post
+                $http.put
+                $http.delete
+                $http.jsonp
+                $http.patch
+        </pre>
+    </div>
+</body>
+
+</html>
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("pCtrl", function ($scope, $http) {
+        $scope.name = "111";
+        // $http({
+        //     method: 'GET',
+        //     url: '/someUrl'
+        // }).then(function successCallback(response) {
+        //     // 请求成功执行代码
+        // }, function errorCallback(response) {
+        //     // 请求失败执行代码
+        // });
+        $http.get("sites.json")
+            .then(function (response) { $scope.names = response.data.sites;
+            console.log($scope.names)
+            });
+    })
+</script>

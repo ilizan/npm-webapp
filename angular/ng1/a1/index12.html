@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../angular/angular.js"></script>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+        table tr:nth-child(odd) {
+            background-color: #f1f1f1;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="pCtrl">
+        <h2>table表格</h2>
+        <table border="1">
+            <tr ng-repeat="x in list| orderBy : 'Name'">
+                <td>{{ $index + 1 }}</td>
+                <td>{{ x.Name| uppercase }}</td>
+                <td>{{ x.Url| uppercase }}</td>
+                <td>{{ x.Country| uppercase }}</td>
+
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("pCtrl", function ($scope, $http) {
+        $http.get("sites.json")
+            .then(function (result) {
+                $scope.list = result.data.sites;
+                console.log($scope.list)
+            });
+    });
+</script>
