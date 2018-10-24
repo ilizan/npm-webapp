@@ -35,3 +35,7 @@ git remote add neworigin http://xxx.git
 然后直接push
 //推送到服务器代码
 git push neworigin master
+
+
+
+{{ 'loginPage.titleByPsd' | translate }}
