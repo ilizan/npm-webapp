@@ -14,6 +14,14 @@ $ hexo new "My New Post"
 
 More info: [Writing](https://hexo.io/docs/writing.html)
 
+``` bash
+$ hexo new page "about"
+```
+添加后到
+themes/主题/_config.yml/目录下 添加
+menu:
+  about: /about/
+
 ### Run server
 
 ``` bash
