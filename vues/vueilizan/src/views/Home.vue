@@ -9,6 +9,11 @@
           <Carousel v-model="value1" loop class="ca" arrow="always">
               <CarouselItem>
                   <div class="demo-carousel">
+                    <img src="../assets/banner3.jpg" alt="">
+                  </div>
+              </CarouselItem>
+              <!-- <CarouselItem>
+                  <div class="demo-carousel">
                     <img src="../assets/banner1.jpg" alt="">
                   </div>
               </CarouselItem>
@@ -16,12 +21,7 @@
                   <div class="demo-carousel">
                     <img src="../assets/banner2.jpg" alt="">
                   </div>
-              </CarouselItem>
-              <CarouselItem>
-                  <div class="demo-carousel">
-                    <img src="../assets/banner3.jpg" alt="">
-                  </div>
-              </CarouselItem>
+              </CarouselItem> -->
           </Carousel>
         </Col>
         <Col :sm="{ span: 6, offset: 9 }" :xs="{ span: 24, offset: 0 }" style="margin-top:20px;">
@@ -65,10 +65,10 @@ img {
   display: block;
 }
 .time{
-        font-size: 14px;
-        font-weight: bold;
-    }
-    .content{
-        padding-left: 5px;
-    }
+    font-size: 14px;
+    font-weight: bold;
+}
+.content{
+    padding-left: 5px;
+}
 </style>

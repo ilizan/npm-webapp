@@ -126,9 +126,9 @@ export default {
 <style lang="scss">
 .im {
   // margin: 200px 0;
-  background-image: url(../assets/iphonex.png);
-  height: 727px;
-  width: 364px;
+  // background-image: url(../assets/iphonex.png);
+  // height: 727px;
+  // width: 364px;
   * {
     // border: 1px solid #ccc;
   }
@@ -140,10 +140,10 @@ export default {
   .im_bg {
     background-color: #e9ebe9;
     position: relative;
-    top: 22px;
-    left: 24px;
-    width: 316px;
-    border-radius: 33px;
+    // top: 22px;
+    // left: 24px;
+    // width: 316px;
+    // border-radius: 33px;
     overflow: hidden;
     .tit {
       color: #fff;
@@ -156,8 +156,8 @@ export default {
     padding: 5px;
   }
   .box {
-    height: 586px;
-    // height:300px;
+    // height: 586px;
+    height:450px;
     overflow: scroll;
   }
   .box .item {

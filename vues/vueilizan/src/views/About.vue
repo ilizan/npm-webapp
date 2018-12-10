@@ -3,26 +3,28 @@
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/>
     <buttoCounter msg="2"></buttoCounter>
     <buttoCounter msg="5"></buttoCounter>
-    <Button type="primary">Primary</Button> -->
+    <Button type="primary">Primary</Button>-->
     <Row>
-        <Col :sm="{ span: 18, offset: 3 }" :xs="{ span: 24, offset: 0 }">
-          <h2 class="page_title">关于</h2>
-        </Col>
-        <Col :sm="{ span: 18, offset: 3 }" :xs="{ span: 24, offset: 0 }">
-          <Tabs value="name1" type="card">
-              <TabPane label="微博" name="name1">
+      <Col :sm="{ span: 18, offset: 3 }" :xs="{ span: 24, offset: 0 }">
+        <h2 class="page_title">关于</h2>
+      </Col>
+      <Col :sm="{ span: 18, offset: 3 }" :xs="{ span: 24, offset: 0 }">
+        <Tabs value="name1" type="card">
+          <TabPane label="微博&微信" name="name1">
+            <Row>
+              <Col :sm="{ span:8,offset:4 }" :xs="{ span: 24, offset: 0 }">
                 <WB class="jz"></WB>
-              </TabPane>
-              <TabPane label="微信" name="name2">
+              </Col>
+              <Col :sm="{ span:8 }" :xs="{ span: 24 }">
                 <IM class="jz"></IM>
-              </TabPane>
-              <!-- <TabPane label="智能机器人" name="name3">
+              </Col>
+            </Row>
+          </TabPane>
+          <!-- <TabPane label="智能机器人" name="name3">
                 <AIIM class="jz"></AIIM>
-              </TabPane> -->
-              
-          </Tabs>
-        </Col>
-
+          </TabPane>-->
+        </Tabs>
+      </Col>
     </Row>
   </div>
 </template>
@@ -37,7 +39,7 @@ export default {
   name: "about",
   components: {
     IM,
-    WB,
+    WB
     // AIIM
   },
   data() {
@@ -51,9 +53,6 @@ export default {
 .about {
   * {
     // border: 1px solid #ccc;
-  }
-  .jz {
-    margin: 0 auto;
   }
 }
 </style>
