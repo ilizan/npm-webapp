@@ -33,15 +33,21 @@
                   </p>
               </Card>
           </Col>
-          
+          <Col :sm="{ span: 24, offset: 0 }">
+            <!-- <DS></DS> -->
+          </Col>
         </Col>
     </Row>
   </div>
 </template>
 
 <script>
+import DS from "@/components/dashang.vue";
 export default {
   name: "links",
+  components: {
+    DS
+  },
   data() {
     return {
       my: [],

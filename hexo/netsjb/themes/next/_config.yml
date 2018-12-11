@@ -128,13 +128,14 @@ scheme: Gemini
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
-  官网: http://ilizan.cn || home
-  简历: http://ilizan.cn/jianli || address-card-o
-  GitHub: https://github.com/ilizan || github
-  码云 : https://gitee.com/ilizan/ || github
-  Coding: https://coding.net/u/ilizan || github
-  微博: https://weibo.com/2610618495 || weibo
-  工具箱: http://tool.ilizan.cn || wrench
+  # 官网: http://ilizan.cn || home
+  # 简历: http://ilizan.cn/jianli || address-card-o
+  # GitHub: https://github.com/ilizan || github
+  # 码云 : https://gitee.com/ilizan/ || github
+  # Coding: https://coding.net/u/ilizan || github
+  # 微博: https://weibo.com/2610618495 || weibo
+  # 工具箱: http://tool.ilizan.cn || wrench
+
   #GitHub: https://github.com/yourname || github
   #E-Mail: mailto:yourname@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google

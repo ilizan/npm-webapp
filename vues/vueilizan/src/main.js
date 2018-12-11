@@ -14,10 +14,9 @@ Vue.use(iView);//注入ui组件
 
 //接口请求组件------------------
 import axios from 'axios'
-import Qs from 'qs'
+import Qs from 'qs'//QS是axios库中带的，不需要我们再npm安装一个
 Vue.prototype.axios = axios;
 Vue.prototype.qs = Qs;
-//QS是axios库中带的，不需要我们再npm安装一个
 //接口请求组件----------------------------
 
 

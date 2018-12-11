@@ -1,7 +1,3 @@
-
-
-
-
 <template>
   <div class="home">
     <Row>
@@ -27,7 +23,7 @@
         <Col :sm="{ span: 6, offset: 9 }" :xs="{ span: 24, offset: 0 }" style="margin-top:20px;">
           <Card dis-hover>
             <p slot="title">标题</p>
-            <p>正在开发中，即将全新上线。</p>
+            <p>首页正在制作中，更多内容请移步<a href="https://ilizan.github.io/blog/" target="_blank">Blog</a>。</p>
           </Card>
         </Col>
     </Row>

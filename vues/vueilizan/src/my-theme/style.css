@@ -1,5 +1,20 @@
 .page_title {
-    text-align: center;
-    font-size: 20px;
-    line-height: 120px;
-  }
+  text-align: center;
+  font-size: 20px;
+  line-height: 120px;
+}
+.post_title{
+  text-align: center;
+  font-size: 23px;
+  line-height: 40px;
+  font-weight: inherit;
+}
+.post_time{
+  text-align: center;
+}
+.post_content{
+  min-height: 300px;
+}
+.post_content p{
+  margin-top: 10px;
+}

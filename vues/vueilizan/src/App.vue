@@ -5,8 +5,9 @@
         <Menu mode="horizontal" active-name="1">
           <MenuItem name="1" to="/">首页</MenuItem>
           <MenuItem name="2" to="about">关于</MenuItem>
-          <MenuItem name="3" to="link">链接</MenuItem>
-          <MenuItem name="4" @click.native="modal1 = true" class="zcw">支持</MenuItem>
+          <MenuItem name="3" to="box">箱子</MenuItem>
+          <MenuItem name="4" to="link">链接</MenuItem>
+          <MenuItem name="5" @click.native="modal1 = true" class="zcw">支持</MenuItem>
         </Menu>
       </Col>
     </Row>
