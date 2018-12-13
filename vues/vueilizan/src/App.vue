@@ -11,7 +11,7 @@
         </Menu>
       </Col>
     </Row>
-    
+
     <transition name="fade" mode="out-in">
       <router-view/>
     </transition>
@@ -41,7 +41,9 @@ export default {
     return {
       modal1: false
     };
-  }
+  },
+  mounted: function() {},
+  methods: {}
 };
 </script>
 <style lang="scss">
