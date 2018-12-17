@@ -9,3 +9,6 @@ http://ilizan.cn/cmd/
 
 
 {{ 'loginPage.titleByPsd' | translate }}
+
+我是md文件，
+md文件能知道添加或修改的地方。
