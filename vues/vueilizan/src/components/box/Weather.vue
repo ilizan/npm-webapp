@@ -124,6 +124,7 @@ export default {
       });
     },
     show(params) {
+      console.log(1)
       this.$Modal.info({
         title: "天气信息",
         content: `日期：${params.date}<br>
