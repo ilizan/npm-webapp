@@ -6,8 +6,13 @@
         <p style="width:100%;height:35px;">
           <!-- <Select v-model="selCity" style="float:right;width:200px" @on-change="getWeather()">
             <Option v-for="item in cityList" :value="item" :key="item">{{ item }}</Option>
-          </Select> -->
-          <Input v-model="selCity" @on-change="getWeather()" placeholder="请输入城市名..." style="float:right;width:200px" />
+          </Select>-->
+          <Input
+            v-model="selCity"
+            @on-change="getWeather()"
+            placeholder="请输入城市名..."
+            style="float:right;width:200px"
+          />
         </p>
         <div v-if="cityInfo">
           <h2 class="post_title">{{cityInfo.city}}天气</h2>
@@ -29,13 +34,8 @@
           </Row>
         </div>
         <div v-if="!cityInfo" class="text_center">
-            <div v-if="selCity">
-                暂未查询到{{selCity}}城市的天气信息
-            </div>
-            <div v-if="!selCity">
-                请输入城市信息
-            </div>
-            
+          <div v-if="selCity">暂未查询到{{selCity}}城市的天气信息</div>
+          <div v-if="!selCity">请输入城市信息</div>
         </div>
       </Card>
     </Col>
@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import { getWeather } from "@/api/api";
+import { getWeather,postDemo } from "@/api/api";
 export default {
   name: "weather",
   data() {
@@ -107,24 +107,24 @@ export default {
   },
   methods: {
     getWeather() {
-        if(!this.selCity){
-            this.cityInfo = "";
-            return;
-        }
-        let para = {
+      if (!this.selCity) {
+        this.cityInfo = "";
+        return;
+      }
+      let para = {
         city: this.selCity
-        };
-        getWeather(para).then(res => {
+      };
+      getWeather(para).then(res => {
         if (res.data.code == 200) {
-            this.cityInfo = res.data.data;
-            this.cityInfo.forecast.splice(0, 1);
+          this.cityInfo = res.data.data;
+          this.cityInfo.forecast.splice(0, 1);
         } else if (res.data.code == 201) {
-            this.cityInfo = "";
+          this.cityInfo = "";
         }
       });
     },
     show(params) {
-      console.log(1)
+      console.log(1);
       this.$Modal.info({
         title: "天气信息",
         content: `日期：${params.date}<br>
@@ -132,12 +132,27 @@ export default {
         温度：${params.low}~${params.high}<br>
         风向：${params.fengxiang}`
       });
+    },
+    postDemo(){
+      let data={
+        id:1,
+        name:"小明"
+      }
+      postDemo(data).then(res => {
+        if (res.data.code == 200) {
+          this.cityInfo = res.data.data;
+          this.cityInfo.forecast.splice(0, 1);
+        } else if (res.data.code == 201) {
+          this.cityInfo = "";
+        }
+      });
     }
   },
   mounted() {
     //初始化默认
     this.selCity = this.cityList[0];
     this.getWeather(); //天气
+    // this.postDemo();
   }
 };
 </script>
