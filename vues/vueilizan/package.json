@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "iview": "^3.1.5",
+    "iview": "^3.2.2",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
@@ -18,7 +18,7 @@
     "@vue/cli-plugin-babel": "^3.0.3",
     "@vue/cli-plugin-e2e-cypress": "^3.0.3",
     "@vue/cli-service": "^3.0.3",
-    "less": "^2.7.3",
+    "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",

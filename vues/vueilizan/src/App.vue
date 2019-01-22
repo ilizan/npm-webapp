@@ -17,17 +17,7 @@
     </transition>
 
     <Modal v-model="modal1" title="支持我">
-      <h2 class="center_D modalTit">您可以支持我，让我飞的更高，谢谢。</h2>
-      <Row class="center_D">
-        <Col :sm="{ span: 12, offset: 0 }">
-          <img src="./assets/zfb.jpg">
-          <p>支付宝</p>
-        </Col>
-        <Col :sm="{ span: 12, offset: 0 }">
-          <img src="./assets/wx.jpg">
-          <p>微信</p>
-        </Col>
-      </Row>
+      <DS titleFlag="1"></DS>
     </Modal>
     <!-- <div class="cuBox">
         top
@@ -36,7 +26,12 @@
   </div>
 </template>
 <script>
+import DS from "@/components/dashang.vue";
+
 export default {
+  components: {
+    DS
+  },
   data() {
     return {
       modal1: false
@@ -59,16 +54,8 @@ export default {
 .ivu-menu-light.ivu-menu-horizontal .ivu-menu-item.zcw {
   color: red;
 }
-.modalTit {
-  font-size: 18px;
-  padding-bottom: 10px;
-}
-.center_D {
-  text-align: center;
-}
-.center_D img {
-  display: inline-block;
-  width: 200px;
+ul.ivu-menu-horizontal.ivu-menu-light:after{
+  height: 0;
 }
 
 // .cuBox{

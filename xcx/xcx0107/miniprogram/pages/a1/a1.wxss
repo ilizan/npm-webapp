@@ -1,0 +1,17 @@
+/* miniprogram/pages/a1/a1.wxss */
+.main{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.v1 {
+  display: flex;
+  width: 33.3333%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  height: 50px;
+  line-height: 50px;
+}

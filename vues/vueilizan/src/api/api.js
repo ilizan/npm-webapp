@@ -24,6 +24,7 @@ axios.interceptors.request.use(function (config) {
         //转换成formdata格式
         config.data = Qs.stringify(config.data);
         // config.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+        // console.log(config)
     }
     iView.LoadingBar.start();
     return config;

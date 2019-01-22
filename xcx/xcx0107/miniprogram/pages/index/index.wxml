@@ -39,7 +39,9 @@
       <text>快速新建云函数</text>
     </navigator>
   </view>
-  <view>
-    
+  <view class="uploader">
+    <navigator url="../a1/a1" open-type="navigate" class="uploader-text">
+      <text>a1</text>
+    </navigator>
   </view>
 </view>

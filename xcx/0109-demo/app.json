@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/video/video",
+    "pages/rtmp/rtmp"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00B26A",
+    "navigationBarTitleText": "ilizan-demo",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "index"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "video"
+      },
+      {
+        "pagePath": "pages/rtmp/rtmp",
+        "text": "rtmp"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "log"
+      }
+    ]
+  }
+}

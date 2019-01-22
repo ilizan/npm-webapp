@@ -1,14 +1,14 @@
 <template>
   <div class="home">
     <Row>
-        <Col :sm="{ span: 24, offset: 0 }" :xs="{ span: 24, offset: 0 }">
+        <Col :sm="{ span: 18, offset: 3 }" :xs="{ span: 24, offset: 0 }">
           <Carousel v-model="value1" loop class="ca" arrow="always">
               <CarouselItem>
                   <div class="demo-carousel">
                     <img src="../assets/banner3.jpg" alt="">
                   </div>
               </CarouselItem>
-              <!-- <CarouselItem>
+              <CarouselItem>
                   <div class="demo-carousel">
                     <img src="../assets/banner1.jpg" alt="">
                   </div>
@@ -17,7 +17,7 @@
                   <div class="demo-carousel">
                     <img src="../assets/banner2.jpg" alt="">
                   </div>
-              </CarouselItem> -->
+              </CarouselItem>
           </Carousel>
         </Col>
         <Col :sm="{ span: 6, offset: 9 }" :xs="{ span: 24, offset: 0 }" style="margin-top:20px;">
@@ -42,14 +42,26 @@ export default {
 };
 </script>
 <style>
-/* .demo-carousel{
-  height:300px;
-  border:1px solid #ccc;
-} */
+.demo-carousel{
+  height:auto;
+}
+.demo-carousel img{
+  width:100%;
+}
+body *{
+  /* border:1px solid red; */
+}
 .ca {
   width: 100%;
-  margin: 0 auto;
+  margin: 10px auto;
   text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-transition: all ease-in-out .5s;
+	transition: all ease-in-out .5s;
+}
+.ca:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,.28);
 }
 .demo-carousel {
   background-color: #fff;
