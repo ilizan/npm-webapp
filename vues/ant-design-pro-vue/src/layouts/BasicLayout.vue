@@ -115,6 +115,7 @@ export default {
     this.collapsed = !this.sidebarOpened
   },
   mounted () {
+    console.log(this.$router.options)
     const userAgent = navigator.userAgent
     if (userAgent.indexOf('Edge') > -1) {
       this.$nextTick(() => {

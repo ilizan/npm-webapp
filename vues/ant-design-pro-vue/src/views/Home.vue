@@ -194,6 +194,7 @@ export default {
     },
     getTagCloudData () {
       this.$http.get('/data/antv/tag-cloud').then(res => {
+        console.log(res.result)
         this.tagCloudData = res.result
       })
     }

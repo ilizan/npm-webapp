@@ -264,6 +264,9 @@ export default {
         duration: 4
       })
     }
+  },
+  mounted() {
+    this.form.setFieldsValue({ username: "admin", password: "admin" });
   }
 }
 </script>
