@@ -1,0 +1,88 @@
+<view class='nav' style='height:{{navH}}px'>
+  <view class='title_icon'>
+    <image src='/images/back.png' mode='aspectFit' class='back' bindtap='navBack'></image>
+ 
+    <view></view>
+    <image src='/images/home.png' mode='aspectFit' class='home' bindtap='navHome'></image>
+  </view>
+  <view class='title_text'>
+    简谈
+  </view>
+</view>
+
+
+<form bindsubmit="submitForm" report-submit="true">
+  <view class="release">
+    <view class='xihuan' bindtap="OntoLike">
+      <image wx:if="{{islike==true||islike=='True'}}" class="zan_img2" src="/images/okxin.png" ></image>
+      <image wx:else src="/images/noxin.png" class="zan_img2"></image>
+      <view class='xizi'><span>喜欢</span>·{{LikeNumber}}</view>
+    </view>
+    <view class='lunping' bindtap="pinglun">
+      <image src="/images/pinglun.png" class="zan_img3"></image>
+      <view class='xizi'><span>评论</span>·{{CommentNumber}}</view>
+    </view>
+
+    <!--<view class="replyinfo2">
+      <textarea placeholder-class="input_null" fixed="true" maxlength="-1" show-confirm-bar="false" cursor-spacing="15" auto-height="true" placeholder="点击发表你的评论" name="comment"></textarea>
+      <button form-type="submit" class="submit">发送</button>
+    </view>-->
+  </view>
+</form>
+
+
+<view class="container" style="margin-top: {{navH}}px">
+
+<view class="bg bg-blur" style="background-image: url('https://xcx.zkcmg.com/api_jt/img/jin.jpg'); background-color:#000;"></view>
+
+<video class="video110" style="margin-top: {{navH}}px" autoplay="true" poster="{{XImageUrl}}" src="{{VideoUrl}}">
+</video>
+
+
+<view class="dianji">
+  <view class="kong"></view>
+  <view class="xiangqing">
+    <view class="title">
+      <view class="tbiaoti">{{VideoName}}</view>
+    </view>
+    <view class="zhongzi">{{GroupName}} / {{VideoDuration}}</view>
+    <view class="xiaozi">{{Description}}</view>
+  </view>
+
+
+
+
+  <view class="commentAll">
+    <view class="comment-show" wx:for="{{Commentlist}}" wx:key="*">
+      <view class="comment-show-con clearfix">
+        <view class="comment-show-con-img pull-left">
+          <view class="renyuan">
+            <image class='touxiang' src="{{item.avatarUrl}}"></image>
+          </view>
+        </view>
+        <view class="comment-show-con-list pull-left clearfix">
+          <view class="pl-text clearfix">
+            <view class="comment-size-name">{{item.nickName}}</view>
+            <view class='talk-item-zan'>
+              <view class='zanshu'>
+                <view wx:if="{{item.Praise>0}}">{{item.Praise}} </view>
+                <text wx:else decode='true'>&nbsp;</text>
+              </view>
+              <image wx:if="{{item.pState==1}}" data-guid="{{item.Guid}}" bindtap="OntoCommentPraise" class="zan_img" src="/images/okzan.png"></image>
+              <image wx:else src="/images/nozan.png" data-guid="{{item.Guid}}" bindtap="OntoCommentPraise" class="zan_img"></image>
+            </view>
+            <view class="date-dz-left pull-left">{{item.Content}}</view>
+          </view>
+          <view class="date-dz">
+            <view class="my-pl-con">{{item.AddDate}}</view>
+          </view>
+          <view class="hf-list-con"></view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view></view>
+
+<!--客服-->
+<include src="/template/footer.wxml"/>

@@ -1,0 +1,7 @@
+<view class="auth">
+  <image src="/images/logo.png" class="img" mode="aspectFill"></image>
+  <!-- <view class="title">微信授权页面</view> -->
+  <text class="describe">请微信授权登录查看内容\n你的信息将受到保护</text>
+  <button class="btn" open-type='getUserInfo' wx:if="{{canIUse}}" bindgetuserinfo='onAuth'>授权登录</button>
+  <navigator wx:if="{{!canIUse}}" class="btn" url="/pages/index/index" open-type="reLaunch" hover-class="other-navigator-hover">已经授权点击调转</navigator>
+</view>

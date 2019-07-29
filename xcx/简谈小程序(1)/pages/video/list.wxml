@@ -1,0 +1,39 @@
+<view class='nav' style='height:{{navH}}px'>
+  <view class='title_icon'>
+    <image src='/images/back.png' mode='aspectFit' class='back' bindtap='navBack'></image>
+
+    <view></view>
+    <image src='/images/home.png' mode='aspectFit' class='home' bindtap='navHome'></image>
+  </view>
+  <view class='title_text'>
+    {{GroupName}}主页
+  </view>
+</view>
+
+<view class="container" style="margin-top: {{navH}}px">
+  <view class="banner pr tc">
+    <image class="pic" src="{{GroupImageUrl}}"></image>
+   
+    <text class="tag pa">{{Description}}</text>
+ 
+  </view>
+  <view class='list'>
+    <view class="case pr" wx:for="{{VideoList}}" wx:key="*">
+      <image class="pic" data-guid="{{item.Guid}}" mode="aspectFill" bindtap="goToVideo" src="{{item.XImageUrl}}"></image>
+      <view class='ao'><image src="/images/ao.png"></image></view>
+        <view class='shijian'><image src="/images/xiaobofang.png"></image>{{item.VideoDuration}}</view>
+        <view class='biaoshu'>
+      <image class="touxiang" src="{{item.AuthorUrl}}"></image>
+      <view class='kuan'>
+        <view class="title ellipsis">{{item.VideoName}}</view>
+        <view class="tag ellipsis" bindtap="">{{item.Author}} / #{{item.GroupName}}</view>
+      </view>
+      <button open-type="share" data-guid="{{item.Guid}}" data-img="{{item.ImageUrl}}" data-videoname="{{item.VideoName}}">
+        <image class="fenxiang" src="/images/fenxiang.png"></image>
+      </button>
+    </view></view>
+  </view>
+</view>
+
+<!--客服-->
+<include src="/template/footer.wxml"/>

@@ -1,0 +1,11 @@
+<view class='nav' style='height:{{navH}}px'>
+  <view class='title_icon'>
+    <image src='/images/back.jpg' mode='aspectFit' class='back' bindtap='navBack'></image>
+ 
+    <view></view>
+    <image src='/images/home.jpg' mode='aspectFit' class='home' bindtap='navHome'></image>
+  </view>
+  <view class='title_text'>
+
+  </view>
+</view>

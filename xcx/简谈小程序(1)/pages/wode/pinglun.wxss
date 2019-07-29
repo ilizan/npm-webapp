@@ -1,0 +1,9 @@
+.liebiao{width: 92%;  padding: 15px 4%;border-bottom: 3px solid #f7f7f7;}
+.tupian{ width: 72px; float: left;}
+.wenzi0{ margin-left: 75px; padding-bottom: 3px;}
+.wenzi{ font-size: 13px; color: #000;padding-bottom: 4px; font-family: pingfang;}
+.wenzi2{font-weight: bold; font-size: 14px; color: #000; padding-bottom: 3px; font-family: pingfang;}
+.wenzi3{ font-size: 11px; color: #999999}
+
+.touxiang{width:120rpx; height:120rpx;border:solid 6px #f3f3f3;border-radius: 50%;box-sizing: border-box; float: left;}
+.wushuju{text-align: center; padding-top: 20px;}
