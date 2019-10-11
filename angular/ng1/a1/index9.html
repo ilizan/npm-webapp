@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <!-- 告诉 Google 不提供此页面的翻译 -->
+    <meta name="google" content="notranslate" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -18,7 +20,7 @@
     <h2>$timeout服务</h2>
     <h2>$interval 服务</h2>
     <div ng-controller="customersCtrl">
-        {{html}}
+        <!-- {{html}} -->
         <hr>
         {{myHeader}}
         <hr>
@@ -41,7 +43,7 @@
         console.log($scope.myUrl)
         console.log($location.path())
         $http.get("index.html").then(function (res) {
-            console.log(res.data)
+            // console.log(res.data)
             $scope.html = res.data;
         })
         $scope.myHeader = "Hello World!";
@@ -50,12 +52,18 @@
         }, 2000);
         $scope.theTime = new Date().toLocaleTimeString();
         $scope.ii = 0;
-        $interval(function () {
+        var timer = $interval(function () {
             $scope.ii++;
             $scope.theTime = new Date().toLocaleTimeString() + "----" + $scope.ii;
         }, 1000);
+        //销毁
+        $scope.$on("$destroy", function () {
+            if (timer) {
+                $timeout.cancel(timer);
+            }
+        });
         $scope.hex = hexafy.myFunc(66);
-        $scope.counts = [111,222,333,444]
+        $scope.counts = [111, 222, 333, 444]
     });
     app.service('hexafy', function () {
         this.myFunc = function (x) {
@@ -64,6 +72,7 @@
     });
     app.filter('myFormat', ['hexafy', function (hexafy) {
         return function (x) {
+            console.log(x)
             return hexafy.myFunc(x);
         };
     }]);

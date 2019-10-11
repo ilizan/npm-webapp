@@ -64,10 +64,10 @@
                     name: "a1",
                     country: "jflka"
                 }, {
-                    name: "b1",
+                    name: "c1",
                     country: "fjsl"
                 }, {
-                    name: "c1",
+                    name: "b1",
                     country: "fsdl"
                 }]
             })
@@ -88,6 +88,7 @@
             })
             .filter('reverse', function () { //可以注入依赖
                 return function (text) {
+                    console.log(text)
                     return text.split("").reverse().join("");
                 }
             });

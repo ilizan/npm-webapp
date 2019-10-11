@@ -7,11 +7,11 @@
 <script>
 export default {
   name: "aiim",
-  data: function() {
+  data: function() {//
     return {};
   },
   props: {},
-  methods: {
+  methods: {//方法
     getWeibo() {
       let _this = this;
       this.axios.post("http://openapi.tuling123.com/openapi/api/v2", {

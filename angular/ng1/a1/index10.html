@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <!-- 告诉 Google 不提供此页面的翻译 -->
+    <meta name="google" content="notranslate" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -12,6 +14,13 @@
 <body ng-app="myApp">
     <h2>$http服务</h2>
     <div ng-controller="pCtrl">
+        <ul>
+            <li ng-repeat="x in names">
+                <a href="{{x.Url}}" target="_block">
+                    {{x.Name}}
+                </a>
+            </li>
+        </ul>
         <!-- {{name}} -->
         <pre>
                 $http({
@@ -48,9 +57,10 @@
         // }, function errorCallback(response) {
         //     // 请求失败执行代码
         // });
-        $http.get("sites.json")
-            .then(function (response) { $scope.names = response.data.sites;
-            console.log($scope.names)
+        $http.post("sites.json")
+            .then(function (response) {
+                $scope.names = response.data.sites;
+                console.log($scope.names)
             });
     })
 </script>

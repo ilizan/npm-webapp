@@ -2,6 +2,8 @@
 <html lang="en" ng-app>
 
 <head>
+    <!-- 告诉 Google 不提供此页面的翻译 -->
+    <meta name="google" content="notranslate" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,7 +12,8 @@
 </head>
 
 <body>
-    <p>名字 : <input type="text" ng-init="name='测试'" ng-model="name"></p>
+
+    <p>名字 : <input type="text" ng-init="name='测试2'" ng-model="name"></p>
     <h1>名字 {{name}}</h1>
     <div ng-bind="name"></div>
     <div data-ng-app="" data-ng-init="firstName='John'">
@@ -18,7 +21,8 @@
         <p>姓名为 <span data-ng-bind="firstName"></span></p>
 
     </div>
-    <p>我的第一个表达式{{1+6}}</p>
+    <p>我的第一个表达式:1+6={{1+6}}<br />
+        (2+3)*3={{(2+3)*3}}</p>
 </body>
 
 </html>

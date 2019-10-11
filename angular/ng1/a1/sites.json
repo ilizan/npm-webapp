@@ -3,22 +3,22 @@
     "sites": [
         {
             "Name": "1111111111",
-            "Url": "www.runoob.com",
+            "Url": "https://ilizan.cn",
             "Country": "CN"
         },
         {
             "Name": "Google",
-            "Url": "www.google.com",
+            "Url": "https://www.google.com",
             "Country": "USA"
         },
         {
             "Name": "Facebook",
-            "Url": "www.facebook.com",
+            "Url": "https://www.facebook.com",
             "Country": "USA"
         },
         {
             "Name": "222",
-            "Url": "www.weibo.com",
+            "Url": "https://www.weibo.com",
             "Country": "CN"
         }
     ]

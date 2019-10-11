@@ -7,7 +7,7 @@
     <meta name="google" content="notranslate" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="http://code.angularjs.org/1.2.25/angular.min.js"></script>
+    <script src="../angular/angular.js"></script>
     <script src="finance2.js"></script>
     <script src="invoice2.js"></script>
     <title>Document</title>
@@ -22,15 +22,14 @@
         <div>
             单价: <input type="number" ng-model="invoice.cost" required>
             <select ng-model="invoice.inCurr">
-                <option ng-repeat="c in invoice.currencies"></option>
+                <option ng-repeat="c in invoice.currencies">{{c}}</option>
             </select>
         </div>
         <div>
             <b>总价:</b>
-            <span ng-repeat="c in invoice.currencies">
-
-            </span>
-            <button class="btn" ng-click="invoice.pay()">Pay</button>
+            <button class="btn" ng-click="invoice.pay()">Pay</button> <br>
+            {{invoice.jg}} <br>
+            {{invoice.qty * invoice.cost}}
         </div>
     </div>
 </body>
