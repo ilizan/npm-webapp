@@ -11,10 +11,11 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      redirect: '/home',
+      redirect: '/welcome',
       component: Home,
       children: [
-        { path: 'home', name: '', component: () => import('./views/Welcome.vue') }
+        // { path: 'welcome', name: '首页', component: () => import('./views/Welcome.vue') },
+        // { path: 'home2', name: '首页2', component: () => import('./views/Welcome2.vue') }
       ]
     },
     {
@@ -91,7 +92,7 @@ function addDynamicRoutes(menuList = [], routes = []) {
       temp = temp.concat(menuList[i].children)
     } else if (menuList[i].url && /\S/.test(menuList[i].url)) {
       menuList[i].url = menuList[i].url.replace(/^\//, '')
-
+      
       menuList[i].path = menuList[i].path.replace(/^\//, '')
 
       // 创建路由配置

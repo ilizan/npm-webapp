@@ -2,8 +2,8 @@
     {
         "id": 1,
         "parentId": 0,
-        "name": "首页",
-        "path": "/home",
+        "name": "系统首页",
+        "path": "/welcome",
         "url": "/welcome",
         "perms": null,
         "type": 0,
@@ -12,6 +12,7 @@
         "delFlag": 0,
         "parentName": null,
         "level": 0,
+        "isShow": true,
         "children": []
     },
     {
@@ -31,6 +32,7 @@
         "delFlag": 0,
         "parentName": null,
         "level": 0,
+        "isShow": true,
         "children": [
             {
                 "id": 3,
@@ -48,7 +50,8 @@
                 "orderNum": 1,
                 "delFlag": 0,
                 "parentName": "系统管理",
-                "level": 1,
+                "level": 0,
+                "isShow": true,
                 "children": [
                     {
                         "id": 4,
@@ -66,7 +69,8 @@
                         "orderNum": 1,
                         "delFlag": 0,
                         "parentName": "用户管理",
-                        "level": 1,
+                        "level": 0,
+                        "isShow": true,
                         "children": [
                             {
                                 "id": 13,
@@ -84,7 +88,8 @@
                                 "orderNum": 1,
                                 "delFlag": 0,
                                 "parentName": "用户管理",
-                                "level": 1,
+                                "level": 0,
+                                "isShow": true,
                                 "children": []
                             }
                         ]
@@ -107,7 +112,8 @@
                 "orderNum": 4,
                 "delFlag": 0,
                 "parentName": "系统管理",
-                "level": 1,
+                "level": 0,
+                "isShow": true,
                 "children": []
             },
             {
@@ -126,7 +132,8 @@
                 "orderNum": 5,
                 "delFlag": 0,
                 "parentName": "系统管理",
-                "level": 1,
+                "level": 0,
+                "isShow": true,
                 "children": []
             },
             {
@@ -145,7 +152,8 @@
                 "orderNum": 7,
                 "delFlag": 0,
                 "parentName": "系统管理",
-                "level": 1,
+                "level": 0,
+                "isShow": true,
                 "children": []
             },
             {
@@ -164,7 +172,8 @@
                 "orderNum": 8,
                 "delFlag": 0,
                 "parentName": "系统管理",
-                "level": 1,
+                "level": 0,
+                "isShow": true,
                 "children": []
             }
         ]
@@ -186,6 +195,7 @@
         "delFlag": 0,
         "parentName": null,
         "level": 0,
+        "isShow": true,
         "children": [
             {
                 "id": 11,
@@ -203,7 +213,8 @@
                 "orderNum": 0,
                 "delFlag": 0,
                 "parentName": "目录1",
-                "level": 1,
+                "level": 0,
+                "isShow": true,
                 "children": []
             },
             {
@@ -222,9 +233,42 @@
                 "orderNum": 1,
                 "delFlag": 0,
                 "parentName": "目录1",
-                "level": 1,
+                "level": 0,
+                "isShow": true,
                 "children": []
             }
         ]
+    },
+    {
+        "id": 14,
+        "parentId": 0,
+        "name": "左侧目录外路由页1",
+        "path": "/welcome/a",
+        "url": "/welcome/welcome2",
+        "perms": null,
+        "type": 0,
+        "icon": "el-icon-s-home",
+        "orderNum": 0,
+        "delFlag": 0,
+        "parentName": null,
+        "level": 0,
+        "isShow": false,
+        "children": []
+    },
+    {
+        "id": 15,
+        "parentId": 0,
+        "name": "左侧目录外路由页2",
+        "path": "/welcome/b",
+        "url": "/welcome/welcome3",
+        "perms": null,
+        "type": 0,
+        "icon": "el-icon-s-home",
+        "orderNum": 0,
+        "delFlag": 0,
+        "parentName": null,
+        "level": 0,
+        "isShow": false,
+        "children": []
     }
 ]

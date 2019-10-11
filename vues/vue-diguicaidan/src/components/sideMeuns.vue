@@ -1,6 +1,6 @@
 <template>
   <div class>
-    <template v-for="item in meuns">
+    <template v-for="item in meuns" v-if="item.isShow">
       <!-- 若一级菜单 -->
       <template v-if="item.children.length===0">
         <el-menu-item v-bind:key="item.id" v-bind:index="''+item.id" @click="goToUrl(item.path)">
@@ -21,7 +21,7 @@
             {{item.name}}
           </template>
           <!-- 遍历子菜单 -->
-          <template v-for="(itemChild,indexChild) in item.children">
+          <template v-for="(itemChild,indexChild) in item.children" v-if="item.isShow">
             <!-- 当发现存在3级或大于3级菜单时,重新遍历当前组件 -->
             <template v-if="itemChild.children&&itemChild.children.length>0">
               <side-meuns :routes="[itemChild]" class="nest-menu"></side-meuns>

@@ -20,13 +20,19 @@
       <el-container class="content">
         <el-aside width="260px;">
           <!-- 遍历路由，生成做成菜单 -->
-          <el-menu class="el-menu-vertical-demo" :default-active="$route.path" :collapse="isCollapse"
+          <el-menu
+            class="el-menu-vertical-demo"
+            :default-active="defaultActive"
+            :collapse="isCollapse"
           >
             <!-- 菜单组件 -->
             <side-Meuns :routes="getRoutes"></side-Meuns>
           </el-menu>
         </el-aside>
         <el-main>
+          <!-- <div class="page_title">
+            {{$route.name}}
+          </div>-->
           <router-view />
         </el-main>
       </el-container>
@@ -45,7 +51,8 @@ export default {
   },
   data() {
     return {
-      isCollapse: false
+      isCollapse: false,
+      defaultActive: ""
     };
   },
   components: {
@@ -61,10 +68,10 @@ export default {
         localStorage.removeItem("userId");
         this.$router.push("/login");
       });
-    },
-    
+    }
   },
   mounted() {
+    this.defaultActive = this.$route.meta.index + "";
   }
 };
 </script>
@@ -84,6 +91,7 @@ export default {
   float: left;
   line-height: 60px;
   font-size: 24px;
+  font-weight: 200;
 }
 .content {
   position: fixed;
@@ -112,6 +120,7 @@ export default {
 .el-main {
   background-color: #e9eef3;
   color: #333;
+  padding: 10px;
 }
 
 body > .el-container {
@@ -125,5 +134,8 @@ body > .el-container {
 
 .el-container:nth-child(7) .el-aside {
   line-height: 320px;
+}
+.page_title {
+  background-color: #fff;
 }
 </style>
