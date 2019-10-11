@@ -1,0 +1,73 @@
+<!--导航-->
+<view class='nav' style='height:{{navH}}px'>
+  <view class='title_text'>
+    简谈
+  </view>
+</view>
+<view class="container" style="margin-top: {{navH}}px">
+
+<!--选项卡-->
+<view class='tab2'>
+  <view class="tab110{{tab.tab1?' active':''}}" data-index="1" bindtap="tab">精选<div class="xiahuaxian{{tab.xiahuaxian2?' active2':''}}"> </div></view>
+  <view class="tabj tab110{{tab.tab2?' active':''}}" data-index="2" bindtap="tab">分类<div class="xiahuaxian{{tab.xiahuaxian1?' active2':''}}"> </div></view>
+</view>
+
+<view hidden="{{tab.tab2}}">
+
+<!--
+  <view class="swiperContainer">
+    <swiper bindchange="swiperChange" autoplay="{{autoplay}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="*this">
+        <swiper-item wx:key="*this">
+          <image src="{{item.ImageUrl}}" class="slide-image" class='img' />
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class="dots">
+      <block wx:for="{{imgUrls}}" wx:key="*">
+        <view class="dot{{index == current ? ' active' : ''}}"></view>
+      </block>
+    </view>
+  </view>
+  <view class='xian'></view>
+  -->
+
+  <view class='list'>
+    <view>
+      <view class="case pr" wx:for="{{VideoList}}"   wx:key="*">
+        <image class="pic" data-guid="{{item.Guid}}" mode="aspectFill" bindtap="goToVideo" src="{{item.XImageUrl}}"></image>
+        <view class='ao'><image src="/images/ao.png"></image></view>
+        <view class='shijian'><image src="/images/xiaobofang.png"></image>{{item.VideoDuration}}</view>
+        <view class='biaoshu'>
+        <image class="touxiang" src="{{item.AuthorUrl}}"></image>
+        <view class='kuan'>
+          <view class="title ellipsis">{{item.VideoName}}</view>
+          <view class="tag ellipsis" bindtap="">{{item.Author}} / #{{item.GroupName}}</view>
+        </view>
+        <button open-type="share" data-guid="{{item.Guid}}" data-img="{{item.ImageUrl}}" data-videoname="{{item.VideoName}}">
+          <image class="fenxiang" src="/images/fenxiang.png"></image>
+        </button>
+      </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view hidden="{{tab.tab1}}">
+  <view class='xian2'></view>
+  <view class='fen'>
+    <ul>
+      <view wx:for="{{GroupList}}"  wx:key="*">
+        <li>
+          <image class="fentu" data-id="{{item.Id}}" bindtap="goToGroup" src="{{item.ImageUrl}}"></image>
+          <view class='fenbiao'>#{{item.GroupName}}</view>
+        </li>
+      </view>
+    </ul>
+  </view>
+</view>
+</view>
+
+<!--客服-->
+<include src="/template/footer.wxml"/>

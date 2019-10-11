@@ -1,0 +1,8 @@
+.liebiao{width: 92%; height: 110px; border-bottom: 1px solid #f7f7f7; padding-left: 4%; padding-right: 4%; margin-top: 10px;}
+image{ width: 150px; height:100px; border-radius: 5px;}
+.tupian{ width: 168px; float: left;}
+.wenzi{ float: left; font-size: 12px; margin-top: 10px; overflow: hidden;color: #999;}
+
+.wushuju{text-align: center; padding-top: 20px;}
+.wenzi2{font-weight: bold; font-size: 18px; overflow: hidden; padding-top: 20px; color: #000; padding-bottom: 5px;height: 18px; font-family: pinglun;}
+

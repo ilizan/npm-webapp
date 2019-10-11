@@ -1,0 +1,31 @@
+<view class='nav' style='height:{{navH}}px'>
+  <view class='title_icon'>
+    <image src='/images/back.png' mode='aspectFit' class='back' bindtap='navBack'></image>
+
+    <view></view>
+    <image src='/images/home.png' mode='aspectFit' class='home' bindtap='navHome'></image>
+  </view>
+  <view class='title_text'>
+    评论丨简谈
+  </view>
+</view>
+
+<view class="container" style="margin-top: {{navH}}px">
+
+<view class="conts">
+ 
+    <textarea class="areas" name='comment' auto-focus='true' placeholder='请写下你的评论...' minlength="{{min}}" maxlength="{{max}}" bindinput="inputs">
+      <text class='zishu currentWordNumber'>{{max-currentWordNumber}}</text>
+      <!-- <text class="hint">{{texts}}</text> -->
+    </textarea>
+    
+     
+   
+    <view class='kuan'>
+      <view class='quxiao' bindtap="quxiao">取消</view>
+      <view class="fabu" bindtap="fabu">发布</view>
+    </view>
+  
+</view>
+
+</view>

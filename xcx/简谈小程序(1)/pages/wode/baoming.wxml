@@ -1,0 +1,50 @@
+<view class='nav' style='height:{{navH}}px'>
+  <view class='title_icon'>
+    <image src='/images/back.png' mode='aspectFit' class='back' bindtap='navBack'></image>
+
+    <view></view>
+    <image src='/images/home.png' mode='aspectFit' class='home' bindtap='navHome'></image>
+  </view>
+  <view class='title_text'>
+    我要上栏目
+  </view>
+</view>
+
+<view class="container" style="margin-top: {{navH+5}}px">
+
+  <view class='wai'>
+    <view class='shang'>
+      <view class='dazi'>报名做讲者</view>
+      <view class='xiaozi'>请留下你分享的主题与内容，我们将尽快与您联系</view>
+    </view>
+  </view>
+
+  <form bindsubmit="formSubmit">
+    <view class="sectionnn">
+      <view class="sectionn">
+        <text class="txt">姓名:</text>
+        <input type="text" name="Name" value='{{form_info}}'/>
+
+        <text class="txt">电话:</text>
+        <input type="number" maxlength="11" name="Mobile" value='{{form_info}}'/>
+
+        <text class="txt">微信:</text>
+        <input type="text" name="WeChat" value='{{form_info}}'/>
+
+        <text class="txt">职业:</text>
+        <input type="text" name="Professional" value='{{form_info}}'/>
+
+        <text class="txt2">简述分享主题:</text>
+        <textarea type="text" name="Describe" value='{{form_info}}'/>
+      </view>
+    </view>
+
+    <view class='anniuwai'>
+      <button class='anniu'  form-type="submit">提交</button>
+    </view>
+  </form>
+</view>
+
+
+<!--客服-->
+<include src="/template/footer.wxml" />

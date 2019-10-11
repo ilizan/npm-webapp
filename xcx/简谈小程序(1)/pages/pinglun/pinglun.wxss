@@ -1,0 +1,41 @@
+.conts{
+  width: 750rpx;
+  height: auto;
+  border: 1rpx soldi red;
+  margin-top: 30rpx;
+}
+.kuan{width: 90%; margin: 0 auto; margin-top: 10px;}
+.quxiao{ color: #999999;float:left; font-size: 28rpx;font-family:Microsoft YaHei;}
+.fabu{ float: right; font-weight: bold; color: #000;border: none;font-size: 28rpx;line-height:inherit;padding: 0px;background-color:#fff;font-family:Microsoft YaHei; }
+.button-hover{ background-color: inherit;}
+button{position: inherit;}
+
+.areas{
+  min-height:260rpx;
+  height: auto;
+  font-size: 32rpx;
+  border-bottom: 1rpx solid #ccc;
+  padding-top: 33rpx;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative; 
+  width: auto;
+  margin-left: 4%;
+  margin-right: 4%;font-family:Microsoft YaHei;
+  color: #888888;
+  letter-spacing: 1px;
+}
+.currentWordNumber{
+  font-size: 28rpx;
+  color: #999999;
+  position: absolute;
+  right: 0px;
+  bottom:0px;
+}
+.hint{
+   font-size: 28rpx;
+   position: absolute;
+   top: 120rpx;
+   left: 30rpx;
+   color: #FF6600;
+}

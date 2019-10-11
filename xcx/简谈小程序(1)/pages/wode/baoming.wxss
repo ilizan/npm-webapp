@@ -1,0 +1,22 @@
+.wai{}
+.shang{height: 112px;}
+.dazi{ width: 100%; text-align: center; font-size: 40rpx; padding-top: 23px; font-weight: bold; color: #000;}
+.xiaozi{ width: 100%; text-align: center; padding-top: 10px; font-family: pingfang; font-size: 12px;  color: #3e3e3e; }
+
+.sectionnn{padding: 0 5%;}
+
+.sectionn{ float: none;  height: 305px; background: #fafafa; padding: 30px 5%;}
+
+.txt{letter-spacing: 1px;font-size: 15px;font-weight: 600;font-family:pingfang;width: 15%; float: left; text-align: left; color: #3e3e3e; 
+border-bottom: 1px solid #c9c9c9;height: 25px;padding-left:5%;}
+
+.txt2{letter-spacing: 1px;font-size: 15px;font-family:pingfang;width: 95%; float: left; text-align: left; color: #3e3e3e; height: 25px;padding-left:5%;font-weight: 600;}
+
+
+.sectionn input{ width: 78%;font-size: 15px;font-weight: 600;font-family:pingfang; margin: 0; float: left; padding: 0;height: 25px;text-align: left; padding-left: 5px; min-height: inherit; margin-bottom: 20px; line-height: 23px;border-bottom: 1px solid #c9c9c9;border-top:none; border-left: none; border-right: none; background: none;}
+
+
+.sectionn textarea{ position: inherit; width: 98%; margin: 0 ; float: left; height: 100px; border: 1px solid #c9c9c9; padding: 1%; margin-bottom: 40px;}
+
+.anniuwai{ padding: 0 10%}
+.anniu{ width: 100%; margin: auto; background: #62b758; height: 38px; line-height: 38px; color: #fff;}
