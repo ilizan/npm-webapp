@@ -14,8 +14,8 @@ const router = new Router({
       redirect: '/welcome',
       component: Home,
       children: [
-        // { path: 'welcome', name: '首页', component: () => import('./views/Welcome.vue') },
-        // { path: 'home2', name: '首页2', component: () => import('./views/Welcome2.vue') }
+        { path: 'welcome', name: '系统首页', meta: { index: 'welcome' }, component: () => import('./views/Welcome.vue') },
+        // { path: 'perms/:id', name: '参数页', component: () => import('./views/Perms/Index.vue') }
       ]
     },
     {
@@ -58,7 +58,7 @@ router.beforeEach((to, from, next) => {
 function addMentRoutes(userId, to, from) {
   //根据用户角色请求菜单
   let data = JSON.parse(localStorage.getItem("menuTree"));
-  
+
   //添加动态路由
   let dynamicRoutes = addDynamicRoutes(data);
 
@@ -73,7 +73,7 @@ function addMentRoutes(userId, to, from) {
 
   // 保存加载状态
   store.commit('menuRouteLoaded', true)
-  
+
 }
 
 function handleStaticComponent(router, dynamicRoutes) {
@@ -92,9 +92,11 @@ function addDynamicRoutes(menuList = [], routes = []) {
       temp = temp.concat(menuList[i].children)
     } else if (menuList[i].url && /\S/.test(menuList[i].url)) {
       menuList[i].url = menuList[i].url.replace(/^\//, '')
-      
-      menuList[i].path = menuList[i].path.replace(/^\//, '')
-
+      if (menuList[i].perms) {
+        menuList[i].path = menuList[i].perms.replace(/^\//, '')
+      } else {
+        menuList[i].path = menuList[i].path.replace(/^\//, '')
+      }
       // 创建路由配置
       var route = {
         path: menuList[i].path,

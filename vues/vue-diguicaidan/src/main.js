@@ -5,8 +5,8 @@ import store from './store'
 
 
 import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
-
+// import 'element-ui/lib/theme-chalk/index.css';
+import './element-variables.scss'
 import api from './request'
 
 Vue.use(ElementUI);

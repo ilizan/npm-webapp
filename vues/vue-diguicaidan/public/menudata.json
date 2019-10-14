@@ -1,21 +1,5 @@
 [
     {
-        "id": 1,
-        "parentId": 0,
-        "name": "系统首页",
-        "path": "/welcome",
-        "url": "/welcome",
-        "perms": null,
-        "type": 0,
-        "icon": "el-icon-s-home",
-        "orderNum": 0,
-        "delFlag": 0,
-        "parentName": null,
-        "level": 0,
-        "isShow": true,
-        "children": []
-    },
-    {
         "id": 2,
         "createBy": null,
         "createTime": null,
@@ -166,7 +150,7 @@
                 "name": "系统日志",
                 "path": "/sys/log",
                 "url": "/sys/log/index",
-                "perms": "sys:log:view",
+                "perms": null,
                 "type": 1,
                 "icon": "el-icon-info",
                 "orderNum": 8,
@@ -188,7 +172,7 @@
         "name": "目录",
         "path": "/sys/users",
         "url": "",
-        "perms": "",
+        "perms": null,
         "type": 0,
         "icon": "el-icon-info",
         "orderNum": 1,
@@ -227,7 +211,7 @@
                 "name": "目录2",
                 "path": "/catalog/catalog2",
                 "url": "/catalog/catalog2/index",
-                "perms": "",
+                "perms": null,
                 "type": 1,
                 "icon": "el-icon-view",
                 "orderNum": 1,
@@ -270,5 +254,23 @@
         "level": 0,
         "isShow": false,
         "children": []
+    },
+    {
+        "id": 16,
+        "parentId": 0,
+        "name": "参数路由",
+        "path": "/perms/1234",
+        "url": "/perms/index",
+        "perms": "/perms/:id",
+        "type": 0,
+        "icon": "el-icon-s-home",
+        "orderNum": 0,
+        "delFlag": 0,
+        "parentName": null,
+        "level": 0,
+        "isShow": false,
+        "children": []
     }
+    
+    
 ]

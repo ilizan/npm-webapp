@@ -4,11 +4,11 @@
       <!-- 若一级菜单 -->
       <template v-if="item.children.length===0">
         <el-menu-item v-bind:key="item.id" v-bind:index="''+item.id" @click="goToUrl(item.path)">
-          <template slot="title">
+          <template>
             <!-- 设置icon -->
             <i v-if="item.icon" :class="item.icon"></i>
             <!-- 菜单名称 -->
-            {{item.name}}
+            <span slot="title">{{item.name}}</span>
           </template>
         </el-menu-item>
       </template>
@@ -18,7 +18,7 @@
         <el-submenu v-bind:index="''+item.id">
           <template slot="title">
             <i :class="item.icon"></i>
-            {{item.name}}
+            <span slot="title">{{item.name}}</span>
           </template>
           <!-- 遍历子菜单 -->
           <template v-for="(itemChild,indexChild) in item.children" v-if="item.isShow">
@@ -34,7 +34,7 @@
                 @click="goToUrl(itemChild.path)"
               >
                 <i v-if="itemChild.icon" :class="itemChild.icon"></i>
-                {{itemChild.name}}
+                {{itemChild.name}}{{itemChild.key}}-{{itemChild.id}}
               </el-menu-item>
             </template>
           </template>
@@ -69,3 +69,6 @@ export default {
   }
 };
 </script>
+<style scoped>
+
+</style>

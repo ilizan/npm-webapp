@@ -1,0 +1,60 @@
+/* 改变主题色变量 */
+// $--color-primary: teal;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
+
+
+
+
+//全局样式
+
+
+body{
+padding: 0;
+margin: 0;
+}
+ul,li{
+margin: 0;
+padding: 0;
+list-style: none;
+}
+a {
+    outline: none;
+    color: inherit;
+}
+
+a:link {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:focus {
+    outline: 0;
+    color: inherit;
+    text-decoration: none;
+}
+
+.el-submenu__title i,.el-menu-item i{
+color:#FFF !important;
+}
+.el-menu-item.is-active i{
+color: #48a3da !important;
+}

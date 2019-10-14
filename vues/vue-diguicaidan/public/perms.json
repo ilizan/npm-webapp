@@ -1,0 +1,18 @@
+[
+    {
+        "id": 16,
+        "parentId": 0,
+        "name": "参数路由",
+        "path": "/perms/1234",
+        "url": "/perms/index",
+        "perms": "/perms/:id",
+        "type": 0,
+        "icon": "el-icon-s-home",
+        "orderNum": 0,
+        "delFlag": 0,
+        "parentName": null,
+        "level": 0,
+        "isShow": false,
+        "children": []
+    }
+]
