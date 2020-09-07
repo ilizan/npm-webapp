@@ -1,0 +1,41 @@
+<template>
+  <div id="app">
+    <div id="nav">
+      <!-- <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link> | -->
+      <router-link to="/hetong">劳动合同</router-link> |
+      <router-link to="/canvas">H5画图</router-link>
+      1米9   单开 侧装
+2米8   双开 侧装
+3米3   双开 顶装
+    </div>
+    <router-view/>
+  </div>
+</template>
+
+<style lang="less">
+body{
+  margin: 0;
+  padding: 0;
+}
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+// #nav {
+//   padding: 30px;
+
+//   a {
+//     font-weight: bold;
+//     color: #2c3e50;
+
+//     &.router-link-exact-active {
+//       color: #42b983;
+//     }
+//   }
+// }
+</style>
