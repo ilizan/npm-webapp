@@ -1,0 +1,23 @@
+[
+    {
+        "cityid": "370687",
+        "cityname": "市1",
+        "parentcityid": null,
+        "minmoney": null,
+        "remark": null
+    },
+    {
+        "cityid": "370686",
+        "cityname": "市2",
+        "parentcityid": null,
+        "minmoney": null,
+        "remark": null
+    },
+    {
+        "cityid": "370685",
+        "cityname": "市3",
+        "parentcityid": null,
+        "minmoney": null,
+        "remark": null
+    }
+]

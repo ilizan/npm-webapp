@@ -1,0 +1,16 @@
+[
+    {
+        "areaid": "370687",
+        "areaname": "区县1",
+        "parentareaid": null,
+        "minmoney": null,
+        "remark": null
+    },
+    {
+        "areaid": "370686",
+        "areaname": "区县2",
+        "parentareaid": null,
+        "minmoney": null,
+        "remark": null
+    }
+]
